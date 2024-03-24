@@ -1,0 +1,58 @@
+body {    /*  --- ABA EM CSS--- (JUNTO COM O HTML ACIMA) ---COMENTÁRIO EM CSS SEMPRE COM (/*) */
+	color: white;   /* --- COR DA FONTE*/
+	background-color: rgb(95, 93, 93);  /* COR DO FUNDO DA TELA */
+	
+	font-family: Arial, Helvetica, sans-serif; /* DEFINE A FONTE DO TEXTO */
+}
+
+ul {
+	display: flex;  /* REFERENTE AOS 3 LINKS (SOBREMIM, PROJETOS E CONTATO) */
+	justify-content: space-between; /* SOBRE OS 3 LINKS COM ESPAÇO ENTRE ELES */
+	list-style-type: none; /* AQUI COLOCA O TIPO DE MARCADOR DA LISTA (*, -) AQUI ESTÁ SEM NENHUM (none) */
+	align-items: center; /* AINDA SOBRE OS 3 LINKS... FAZ COM QUE FIQUEM ALINHADOS AO CENTRO */
+	padding: 16px; /* ADICIONA DISTÂNCIA ENTRE O TOPO DO SITE E ALINHAMENTO DOS 3 LINKS */
+}
+
+a {
+	color: white;  /* REFERENTE AOS 3 LINKS... POR SEREM LINKS, ESTABELECE QUE NÃO FIQUEM NA COR AZUL*/
+	text-decoration: none; /* POR SEREM LINKS, ESTABELECE QUE NÃO FIQUEM COM SUBLINHADO*/
+	nav a:hover { color: orange}
+}
+
+header img {
+	width: 151px; /* AQUI DEFINIMOS O TAMANHO IDEAL PARA A IMAGEM */
+	height: 151px;
+	border-radius: 50%; /* AQUI É ESTABELECIDA BORDA REDONDA PARA A IMAGEM */
+	border: 6px solid orange; /* AQUI SE ESTABELECE BORDA (6PX) E COR DA BORDA DA IMAGEM (ORANGE) */
+}
+	.center {
+		text-align: center;
+	}
+	
+	h1 {
+		color: orange
+}
+
+footer img {
+	width: 42px; /* AQUI DEFINIMOS O TAMANHO IDEAL PARA A IMAGEM */
+	height: 42px;
+}
+footer {
+	display: flex;
+	justify-content: center;
+}
+footer a {
+	margin: 22px;
+	text-align: center;
+}
+footer p {
+	margin-top: 2px;
+}
+.container {
+	padding: 0px 50px; /* AQUI DEFINIMOS O TEXTO COM "0px" DE ESPAÇO PARA TOPO E RODAPÉ */
+			   /* AQUI DEFINIMOS O TEXTO COM "50px" DE ESPAÇO PARA DIR E ESQ */
+}
+a:hover {
+	
+	color: orange;
+}
