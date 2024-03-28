@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Primeiro Programa...</title> <!-- TÍTULO ABA-->
+    <style>
+        body {
+            background-color: rgb(144, 144, 228); /*COR DE FUNDO -- COMENTÁRIO EM CSS SEMPRE COM (/*) */
+            color: white; /*COR DO TEXTO*/
+            font: normal 20pt Arial;
+        }
+        h1 {
+            color: rgb(250, 250, 133); /* COR DO CABEÇALHO (MANCHETE) -- COMENTÁRIO EM CSS*/
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, Mundo!</h1> <!--COMENTÁRIO EM HTML-->
+    <time></time>
+
+    <script>
+        var nome = (window.prompt('QUAL É O SEU NOME? '))
+        var idade = (window.prompt('QUAL É A SUA IDADE? '))
+        var nota = (window.prompt('QUANTO EM DINHEIRO TEM NA CARTEIRA AGORA? '))
+        var n1 = Number(window.prompt('DIGITE UM NÚMERO: '))// COMANDO "number.parseFloat" CONVERTE O DADO DIGITADO EM NÚMERO//
+        var n2 = Number(window.prompt('DIGITE OUTRO NÚMERO: '))
+        var s = n1 + n2 // CASO HAJA NECESSIDADE DE CONVERTER NÚMERO PARA STRING, USAR "string(dado, var a ser convertido)"
+        window.alert(`A SOMA ENTRE ${n1} E ${n2} É IGUAL A ${s}`)
+    
+// // // // ANOTAÇÕES PARA USO NO NODE
+// nota.toFixed(2).replace('.',',') ---- ESTABELECE 2 DÍGITOS APÓS VIRGULA
+// nota.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) MOSTRA 'R$' REF $
+// POSSO USAR MÉTODOS DE FORMATAÇÃO PARA A VARIÁVEL "S" COMO OS EXEMPLOS ABAIXO:
+// s.lenght --> MOSTRA QUANTOS CARACTERES A STRING TEM
+// s.toUpperCase() --> PASSA O DADO DE "S" PARA MAÍÚSCULAS
+// s.toLowerCase() --> PASSA O DADO DE "S" PARA MINÚSCULAS
+
+    </script>
+        <script>
+            document.write(`OLÁ, <strong>${nome.toUpperCase()}</strong>! SEU NOME TEM ${nome.length} LETRAS.<br/>`)
+
+            document.write(`SEU NOME É ${nome.toUpperCase()} E ESTÁ COM ${idade} ANOS.<br/>`)
+            
+            document.write(`CONFORME INFORMOU, VOCÊ TEM ${nota.toLocaleString()} NA CARTEIRA.`)
+        </script>
+</body>
+</html>
