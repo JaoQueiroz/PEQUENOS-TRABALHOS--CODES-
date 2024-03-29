@@ -1,0 +1,55 @@
+     {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif; /* DEFINE A FONTE DO TEXTO */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    aling-itens: center;
+    gap: 2rem;
+    padding-top: 3rem;
+    background-color: aqua;
+    height: 100vh;
+}
+
+.container h1 {
+    color: blueviolet;
+}
+
+.timer {
+    display: flex;
+    font-size: 55px;
+    font-weight: bold;
+    color: green;
+}
+
+.time {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    color: yellow;
+    min-width: 90px;
+}
+
+.separator {
+    padding: 0 10px;
+    color: blue;
+}
+
+#milliseconds {
+    font-size: 30px;
+    color: orange;
+}
+
+.buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+#pauseBtn,
+#resumeBtn {
+    display: none;
+}
