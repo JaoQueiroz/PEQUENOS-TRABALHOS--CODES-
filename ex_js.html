@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title> Eventos DOM</title>
+    <title> Eventos DOM / DETRAN</title>
     <style>
         div#area {
             font: normal 20pt Arial;
@@ -53,8 +53,32 @@
             var s = n1 + n2
             res.innerHTML = `A SOMA ENTRE ${n1} E ${n2} É IGUAL A ${s}`
         }
-    
+        function calcular() {
+                var txtv = window.document.querySelector('input#txtvel')
+                var res = window.document.querySelector('div#res')
+                var vel = Number(txtv.value)
+                res.innerHTML = `<p>SUA VELOCIDADE ATUAL É DE <strong>${vel}Km/h</strong></p>`
+                if (vel > 60) {
+                    res.innerHTML += `<p>VOCÊ ESTÁ <strong>MULTADO</strong>!</p>`    
+                }
+                res.innerHTML += `<p>DIRIJA SEMPRE COM CINTO DE SEGURANÇA!</p>`
+                
+        }
     </script>
+    <br/>
+    <br/>
+        
+        <h1> SISTEMA DE MULTAS</h1>
+        VELOCIDADE DO CARRO: <input type="number" name="txtvel" id="txtvel"> Km/h </br>
+        </br>
+        <input type="button" value="VERIFICAR" onclick="calcular()">
+        <div id="res">
+
+        </div>
+        <script>
+            
+        </script>
+
 
 </body>
 </html>
