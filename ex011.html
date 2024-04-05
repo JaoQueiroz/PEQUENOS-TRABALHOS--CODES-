@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Eventos DOM / DETRAN</title>
+    <style>
+        div#area {
+            font: normal 20pt Arial;
+            background: green;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area">
+        Interaja...
+    </div>
+    <stu
+
+
+<h1> VERIFICANDO IDADE E CONDIÇÃO ELEITORAL </h1>
+    <input type="number" name="agen1" id="agen1">
+    <input type="button" value="SITUAÇÃO ELEITORAL" onclick="situ1()">
+    <div id="res">SITUAÇÃO ELEITORAL</div>
+
+<h1>Somando Valores</h1>
+
+    <input type="number" name="txtn1" id="txtn1"> +
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="Somar" onclick="somar()">
+    <div id="res">Resultado</div>
+
+<h1> SISTEMA DE MULTAS</h1>
+    VELOCIDADE DO CARRO: <input type="number" name="txtvel" id="txtvel"> Km/h </br>
+    </br>
+    <input type="button" value="VERIFICAR" onclick="calcular()">
+    <div id="res"></div>
+
+    <script>
+        var a = window.document.getElementById('area')
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+
+        function clicar() {
+            a.innerText = 'Clicou!'
+            a.style.background = 'red'
+        }
+        function entrar() {
+            a.innerText = 'Entrou!'
+        }
+        function sair() {
+            a.innerText = 'Saiu!'
+            a.style.background = 'green'
+        }
+        function somar() {
+            var tn1 = window.document.getElementById('txtn1')
+            var tn2 = window.document.querySelector('input#txtn2')
+            var res = window.document.getElementById('res')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var s = n1 + n2
+            res.innerHTML = `A SOMA ENTRE ${n1} E ${n2} É IGUAL A ${s}`
+        }
+        function calcular() {
+            var txtv = window.document.querySelector('input#txtvel')
+            var res = window.document.querySelector('div#res')
+            var vel = Number(txtv.value)
+            res.innerHTML = `<p>SUA VELOCIDADE ATUAL É DE <strong>${vel}Km/h</strong></p>`
+            if (vel > 60) {
+               res.innerHTML += `<p>VOCÊ ESTÁ <strong>MULTADO</strong>!</p>`    
+               }
+               res.innerHTML += `<p>DIRIJA SEMPRE COM CINTO DE SEGURANÇA!</p>`
+                
+        }
+        function situ1() {
+            var agen1 = window.document.querySelector('input#agen1')
+            var res = window.document.querySelector('div#situ1')
+            res.innerHTML = `<p>VOCÊ TEM ${agen1} ANOS</p>`
+            if (agen1 < 16) {
+                res.innerHTML = `<p>NÃO VOTA!</p>`
+            } else if (agen1 > 65) {
+                res.innerHTML = `<p>VOTO OPCIONAL</p>`
+            } else {
+                res.innerHTML = `<p>VOTO OBRIGATÓRIO!</p>`
+            }
+        }
+    </script>
+    <br/>
+    <br/>
+        
+        
+        <script>
+        </script>
+
+
+</body>
+</html>
