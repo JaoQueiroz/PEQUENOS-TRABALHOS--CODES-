@@ -1,0 +1,1699 @@
+﻿python
+
+int (números inteiros)
+float (fracionados)
+bool (booleanos - V ou F)
+str (frases... entre aspas)
+
+NOME = input('QUAL É O SEU NOME?')
+print('OLÁ ',NOME,'! PRAZER EM TE CONHECER!')
+print('======DESAFIO 2========')
+DIA = input('EM QUE DIA VOCÊ NASCEU?')
+MES = input('EM QUE MÊS VOCÊ NASCEU?')
+ANO = input('EM QUE ANO VOCÊ NASCEU?')
+print('NOSSA ',NOME,'! VOCÊ NASCEU EM ',DIA,' DE ',MES,'DE ',ANO,'.')
+
+
+N1 = input('DIGITE O PRIMEIRO NÚMERO')
+N2 = input('DIGITE O SEGUNDO NÚMERO')
+print('A SOMA DO 1o E 2o NÚMERO É IGUAL A',N1+N2,'.')
+------------------------------------------------------------------------
+N1 = int(input('DIGITE O PRIMEIRO NÚMERO'))
+N2 = int(input('DIGITE O SEGUNDO NÚMERO'))
+S = N1 + N2
+print('A SOMA ENTRE',N1,'E ',N2, 'É IGUAL A',S,'.')
+-------------------------------------------------------------------------
+a = input('DIGITE ALGO: ')
+print('O TIPO PRIMITIVO DESSE VALOR É ', type(a))
+print('SO TEM ESPAÇOS? ', a.isspace())
+print('É UM NÚMERO? ', a.isnumeric())
+print('É ALFABETICO? ', a.isalpha())
+print('É ALFANUMÉRICO? ', a.isalnum())
+print('ESTÁ EM MAIÚSCULAS? ', a.isupper())
+print('ESTÁ EM MINÚSCULAS? ', a.islower())
+print('ESTÁ CAPITALIZADO (MAIÚSC. E MINÚSC)?', a.istitle())
+---------------------------------------------------------------------------
+OPERAÇÕES ARITMÉTICAS (+) (-) (*) (/)
+(**) POTÊNCIA - (//) DIVISÃO INTEIRA - (%) RESTO DIVISÃO
+--------------------------------------------------------------------------
+ANTECESSOR E SUCESSOR
+n = int(input('DIGITE UM NÚMERO: '))
+a = n - 1
+s = n + 1
+print('ANALISANDO O VALOR {}, SEU ANTECESSOR É {} E O SUCESSOR É {}'.format(n, a, s))
+--------------------------------------------------------------------------
+DOBRO, TRIPLO E RAIZ QUADRADA
+n = int(input('DIGITE UM NÚMERO: '))
+d = n * 2
+t = n * 3
+r = n ** (1/2)
+print('O DORBRO DE {}, VALE {}.'.format (n, d))
+print('O TRIPLO DE {}, VALE {}. A RAIZ QUADRADA DE {} É IGUAL A {}'.format (n, t, n, r))
+-----------------------------------------------------------------------------
+LEIA NOTAS E APRESENTE MÉDIA
+n1 = float(input('PRIMEIRA NOTA DO ALUNO: '))
+n2 = float(input('SEGUNDA NOTA DO ALUNO: '))
+média = (n1 + n2) / 2
+print('A MÉDIA ENTRE {:.1f} E {:.1f} É IGUAL A {:.1f}.'.format(n1, n2, média))
+---------------------------------------------------------------------------
+LER METROS E EXIBIR CM E MM
+medida = float(input('UMA DISTÂNCIA EM METROS: '))
+cm = medida * 100
+mm = medida * 1000
+print('A MEDIDA DE {} M CORRESPONDE A {} CM E {} MM.'.format(medida, cm, mm))
+------------------------------------------------------------------------------
+LARGURA E ALTURA (ÁREA) E TINTA PARA PINTAR
+larg = float(input('LARGURA DA PAREDE: '))
+alt = float(input('ALTURA DA PAREDE: '))
+area = larg * alt
+print('SUA PAREDE TEM A DIMENSÃO DE {}X{} E SUA ÁREA É DE {}M².'.format(larg, alt, area))
+tinta = area / 2
+print('PARA PINTAR ESSA PAREDE, VOCÊ PRECISARÁ DE {} LITROS DE TINTA.'.format(tinta))
+--------------------------------------------------------------------------------------
+PREÇO E NOVO PREÇO COM DESCONTO DE 5%
+preço = float(input('QUAL É O PREÇO DO PRODUTO? R$'))
+novo = preço - (preço * 5 / 100)
+print('O PRODUTO QUE CUSTAVA R${:.2f}, NA PROMOÇÃO COM DESCONTO DE 5%, VAI CUSTAR R${}.'.format(preço, novo))
+-----------------------------------------------------------------------------------------------------------
+SALÁRIO + 15% DE AUMENTO
+salário = float(input('QUAL É O SALÁRIO DO FUNCIONÁRIO? R$'))
+novo = salário + (salário * 15 / 100)
+print('UM FUNCIONÁRIO QUE GANHAVA R${:.2f}, COM 15% DE AUMENTO, PASSA A RECEBER R${:.2f}.'.format(salário, novo))
+-----------------------------------------------------------------------------------------------------------
+CONVERSOR DE TEMPERATURA CELSIUS PARA FAHRENHEIT
+c = float(input('INFORME A TEMPERATURA EM ⁰C: '))
+f = ((9 * c) / 5) + 32
+print('A TEMPRATURA DE {}⁰C CORRESPONDE A {}⁰F!'.format(c, f))
+-----------------------------------------------------------------------------------------------------------
+QUANTIDADE DE DIAS (R$500/DIA) E DE KM'S (R$1/KM) RODADOS
+dias = int(input('QUANTOS DIAS ALUGADOS? '))
+km = float(input('QUANTOS KM'S RODADOS? '))
+pago = (dias * 500) + (km * 1)
+print('O TOTAL A PAGAR É DE R${:.2f}.'.format(pago))
+-------------------------------------------------------------
+TRANSFORMA NÚMERO REAL EM PORÇÃO INTEIRA
+import math
+num = float(input('DIGITE UM VALOR: '))
+print('O VALOR DIGITADO FOI {} E A SUA PORÇÃO INTEIRA É {}.'.format(num, math.trunc(num)))
+-------------------------------------------------------------
+CATETO OPOSTO, ADJACENTE E HIPOTENUSA
+co = float(input('COMPRIMENTO DO CATETO OPOSTO: '))
+ca = float(input('COMPRIMENTO DO CATETO ADJACENTE: '))
+hi = (co ** 2 + ca ** 2) ** (1/2)
+print('A HIPOTENUSA VAI MEDIR {:.2f}'.format(hi))
+------------------------------------------------------------
+CATETO OPOSTO, ADJACENTE E HIPOTENUSA COM IMPORT MATH
+import math
+co = float(input('COMPRIMENTO DO CATETO OPOSTO: '))
+ca = float(input('COMPRIMENTO DO CATETO ADJACENTE: '))
+hi = math.hypot(co, ca)
+print('A HIPOTENUSA VAI MEDIR {:.2f}'.format(hi))
+-------------------------------------------------------------
+LÊ ÂNGULO E MOSTRA SENO, COSSENO E TANGENTE
+from math import radians, sin, cos, tan
+angulo = float(input('DIGITE O ÂNGULO QUE VOCÊ DESEJA: '))
+seno = sin(radians(angulo))
+print('O ÂNGULO DE {} TEM O SENO DE {:.2f}'.format(angulo, seno))
+cosseno = cos(radians(angulo))
+print('O ÂNGULO DE {} TEM O COSSENO DE {:.2f}'.format(angulo, cosseno))
+tangente = tan(radians(angulo))
+print('O ÂNGULO DE {} TEM A TANGENTE DE {:.2f}'.format(angulo, tangente))
+-------------------------------------------------------------
+SORTEIA ALUNO
+from random import choice
+n1 = str(input('PRIMEIRO ALUNO: '))
+n2 = str(input('SEGUNDO ALUNO: '))
+n3 = str(input('TERCEIRO ALUNO: '))
+n4 = str(input('QUARTO ALUNO: '))
+lista = [n1, n2, n3, n4]
+escolhido = choice(lista)
+print('O ALUNO ESCOLHIDO FOI {}.'.format(escolhido))
+-------------------------------------------------------------
+SORTEIA ORDEM GRUPO DE ALUNOS
+from random import shuffle
+n1 = str(input('PRIMEIRO ALUNO: '))
+n2 = str(input('SEGUNDO ALUNO: '))
+n3 = str(input('TERCEIRO ALUNO: '))
+n4 = str(input('QUARTO ALUNO: '))
+lista = [n1, n2, n3, n4]
+shuffle(lista)
+print('A ORDEM DE APRESENTAÇÃO SERÁ ')
+print(lista)
+-------------------------------------------------------------
+TOCANDO ARQUIVO MP3
+import pygame
+pygame.init()
+pygame.mixer.music.load('exe21.mp3')
+pygame.mixer.music.play()
+pygame.event.wait()
+-------------------------------------------------------------
+MANIPULANDO TEXTO
+-------------------------------------------------------------
+-------------------------------------------------------------
+-------------------------------------------------------------
+-------------------------------------------------------------
+-------------------------------------------------------------
+LER NOME E DEVOLVER EM MAIÚSCULAS, EM MINÚSCULAS, NÚMERO DE LETRAS
+nome = str(input('DIGITE SEU NOME COMPLETO: ')).strip()
+print('ANALISANDO SEU NOME...')
+print('SEU NOME EM MAIÚSCULAS É {}'.format(nome.upper()))
+print('SEU NOME EM MINÚSCULAS É {}'.format(nome.lower()))
+print('SEU NOME TEM AO TODO {} LETRAS'.format(len(nome) - nome.count(' ')))
+#print('SEU PRIMEIRO NOME TEM {} LETRAS'.format(nome.find(' ')))
+separa = nome.split()
+print('SEU PRIMEIRO NOME É {} E ELE TEM {} LETRAS'.format(separa[0], len(separa[0])))
+-----------------------------------------------------------------------------
+IDENTIFICAR SE A CIDADE COMEÇA COM "SANTO". DES024 (RESPONDE TRUE OR FALSE)
+cid = str(input('EM QUE CIDADE VOCÊ NASCEU? ')).strip()
+print(cid[:5].upper() == 'SANTO')
+----------------------------------------------------------------------------------
+PROGRAMA QUE IDENTIFICA SE UMA PESSOA TEM SILVA NO NOME
+nome = str(input('QUAL É O SEU NOME COMPLETO? ')).strip()
+print('SEU NOME TEM SILVA? {}'.format('silva' in nome.lower()))
+----------------------------------------------------------------------------------
+frase = str(input('DIGITE UMA FRASE: ')).upper().strip()
+print('A LETRA A APARECE {} VEZES NA FRASE. '.format(frase.count('A')))
+print('A PRIMEIRA LETRA A APARECEU NA POSIÇÃO {}'.format(frase.find('A')+1))
+print('A ÚLTIMA LETRA A APARECEU NA POSIÇÃO {}'.format(frase.rfind('A')+1))
+----------------------------------------------------------------------------------
+PROGRAMA QUE RECEBE NOME E IDENTIFICA PRIMEIRO E ÚLTIMO
+n = str(input('DIGITE SEU NOME COMPLETO: ')).strip()
+nome = n.split()
+print('MUITO PRAZER EM TE CONHECER!')
+print('SEU PRIMEIRO NOME É {}.format(nome[0]))
+print('SEU ÚLTIMO NOME É {}.format(nome[len(nome)-1]))
+----------------------------------------------------------------------------------
+RECEBE ANO DO CARRO E INFORMA SE O CARRO É NOVO OU VELHO
+tempo = int(input('QUANTOS ANOS TEM SEU CARRO?'))
+if tempo <= 3:
+	print('CARRO NOVO')
+else:
+	print('CARRO VELHO')
+print('---FIM---')
+----------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+DIGITADOS NOITE 22-05-23
+PERGUNTA VALOR DO IMÓVEL, SALÁRIO E EM QUANTO ANOS PAGA. PRESTAÇÃO MENSAL MENOR QUE 30% OU EMPRÉSTIMO NEGADO
+casa = float(input('VALOR DA CASA: R$'))
+salário = float(input('SALÁRIO DO COMPRADOR: R$'))
+anos = int(input('QUANTOS ANOS DE FINANCIAMENTO? '))
+prestação = casa / (anos * 12)
+mínimo = salário * 30 / 100
+print('PARA PAGAR UMA CASA DE R${:.2f} em {} anos'.format(casa, anos),end='')
+print('A PRESTAÇÃO SERÁ DE R${:.2f}'.format(prestação))
+if prestação <= mínimo:
+	print('EMPRÉSTIMO PODE SER CONCEDIDO!')
+else:
+	print('EMPRÉSTIMO NEGADO!')
+----------------------------------------------------------------------------
+PROGRAMA QUE LEIA NÚMERO INTEIRO E CONVERTA PARA BINÁRIO, OCTAL OU HEXADECIMAL
+num = int(input('DIGITE UM NÚMERO INTEIRO: '))
+print('''ESCOLHA UMA DAS BASES PARA CONVERSÃO:
+[1] CONVERTER PARA BINÁRIO
+[2] CONVERTER PARA OCTAL
+[3] CONVERTER PARA HEXADECIMAL''')
+opção = int(input('SUA OPÇÃO: '))
+if opção == 1:
+	print('{} CONVERTIDO PARA BINÁRIO É IGUAL A {}'. format(num, bin(num)[2:]))
+elif opção == 2:
+	print('{} CONVERTIDO PARA OCTAL É IGUAL A {}'. format(num, oct(num)[2:]))
+elif opção == 3:
+	print('{} CONVERTIDO PARA HEXADECIMAL É IGUAL A {}'. format(num, hex(num)[2:]))
+else:
+	print('OPÇÃO INVÁLIDA. TENTE NOVAMENTE.')
+----------------------------------------------------------------------------------------
+LER 2 NÚMEROS INTEIROS E COMPARE SE O PRIMEIRO OU O SEGUNDO É MAIOR OU SE SÃO IGUAIS
+n1 = int(input('PRIMEIRO NÚMERO: '))
+n2 = int(input('SEGUNDO NÚMERO: '))
+if n1 > n2:
+	print('O PRIMEIRO NÚMERO É MAIOR')
+elif n2 > n1:
+	print('O SEGUNDO NÚMERO É MAIOR')
+else:
+	print('OS DOIS VALORES SÃO IGUAIS')
+-----------------------------------------------------------------------
+LER ANO DE NASCIMENTO E DE ACORDO COM A IDADE RETORNE SE AINDA VAI SE ALISTAR, SE É ANO DE SE ALISTAR OU SE PASSOU O PRAZO. RETORNE TAMBÉM QUANTO TEMPO FALTA OU QUANTO TEMPO PASSOU.
+from datetime import date
+atual = date.today().year
+nasc = inte(input('ANO DE NASCIMENTO: '))
+idade = atual - nasc
+print('QUAM NASCEU EM {}, TEM {} ANOS EM {}.'.format(nasc, idade, atual))
+if idade == 18:
+	print('VOCÊ TEM QUE SE ALISTAR IMEDIATAMENTE!')
+elif idade < 18:
+	saldo = 18 - idade
+	print('AINDA FALTAM {} ANOS PARA O ALISTAMENTO'.format(saldo))
+	ano = atual + saldo
+	print('SEU ALISTAMENTO SERÁ EM {}'.format(ano))
+elif idade > 18:
+	saldo = idade - 18
+	print('VOCÊ JÁ DEVERIA TER SE ALISTADO HÁ {} ANOS.'.format(saldo))
+------------------------------------------------------------------------------------
+RECEBE DUAS NOTAS, CALCULA MÉDIA E INFORME SE ESTÁ REPROVADO, APROVADO OU EM RECUP
+nota1 = float(input('PRIMEIRA NOTA: '))
+nota2 = float(input('SEGUNDA NOTA: '))
+média = (nota1 + nota2) / 2
+print('TIRANDO {:.1f} E {:.1f}, A MÉDIA DO ALUNO É {:.1f}.format(nota1, nota2, média))
+if 7 > média >= 5:
+	print('O ALUNO ESTÁ EM RECUPERAÇÃO. ')
+elif média < 5:
+	print('O ALUNO ESTÁ REPROVADO. ')
+elif média >= 7:
+	print('O ALUNO ESTÁ APROVADO. ')
+-----------------------------------------------------------------------------------------------------
+RECEBE O ANO DE NASCIMENTO E INFORMA CATEGORIA DO ATLETA
+from datetime import date
+atual = dat.today().year
+nascimento = int(input('ANO DE NASCIMENTO: '))
+idade = atual - nascimento
+print('O ATLETA TEM {} ANOS.'format(idade))
+if idade <= 9:
+	print('CLASSIFICAÇÃO: MIRIM')
+elif idade <=14:
+	print('CLASSIFICAÇÃO: INFANTIL')
+elif idade <=19:
+	print('CLASSIFICAÇÃO: JUNIOR')
+elif idade <=25:
+	print('CLASSIFICAÇÃO: SENIOR')
+else:
+	print('CLASSIFICAÇÃO: MASTER')
+----------------------------------------------------------------------
+VERIFICAR TRIANGULO E INFORMAR QUAL O TIPO DE TRIANGULo
+r1 = float(input('PRIMEIRO SEGMENTO: '))
+r2 = float(input('SEGUNDO SEGMENTO: '))
+r3 = float(input('TERCEIRO SEGMENTO: '))
+if r1 < r2 + r3 and r2 < r1 + r3 and r3 < r1 + r2:
+	print('OS SEGMENTOS ACIMA PODEM FORMAR UM TRIÂNGULO!', end='')
+	if r1 == r2 == r3:
+		print('EQUILÁTERO!')
+	if r1 != r2 != r3 != r1:
+		print('ESCALENO!')
+	else:
+		print('ISÓSCELES')
+else:
+	print('OS SEGMENTOS ACIMA NÃO PODEM FORMAR UM TRIÂNGULO')
+---------------------------------------------------------------------------------
+CALCULO IMC E TIPO DE OBESIDADE
+peso = float(input('QUAL É O SEU PESO? (KG) '))
+altura = float(input('QUAL É A SUA ALTURA? (M) '))
+imc = peso / (altura **2)
+print('O IMC DESSA PESSOA É DE {:.1f}'.format(imc))
+if imc < 18.5:
+	print('VOCÊ ESTÁ ABAIXO DO PESO NORMAL')
+elif 18.5 <= imc <25:
+	print('PARABÉNS! VOCÊ ESTÁ NA FAIXA DE PESO NORMAL')
+elif 25 <= imc < 30:
+	print('VOCÊ ESTÁ EM SOBREPESO')
+elif 30 <= imc < 40:
+	print('VOCÊ ESTÁ EM OBESIDADE! CUIDADO!')
+elif imc >= 40:
+	print('CUIDADO! VOCÊ ESTÁ EM OBESIDADE MÓRBIDA!')
+--------------------------------------------------------------------------
+VALOR DE PRODUTO E DESCONTO A DEPENDER DA CONDIÇÃO DE PAGAMENTO (EX44)
+print('{:=^40}'.format(' LOJÃO DO QUEIROZ '))
+preço = float(input('PREÇO DAS COMPRAS: R$'))
+print('''FORMAS DE PAGAMENTO
+[ 1 ] Á VISTA DINHEIRO
+[ 2 ] Á VISTA CARTÃO
+[ 3 ] 2X NO CARTÃO
+[ 4 ] 3X OU MAIS NO CARTÃO''')
+opção = int(input('QUAL É A OPÇÃO? '))
+if opção == 1:
+	total = preço - (preço * 10 / 100)
+elif opção == 2:
+	total = preço - (preço * 5 / 100)
+elif opção == 3:
+	total = preço
+	parcela = total / 2
+	print('SUA COMPRA SERÁ PARCELADA EM 2X DE R${:.2f} SEM JUROS'.format(parcela))
+elif opção == 4:
+	total = preço + (preço * 20 / 100)
+	totparc = int(input('QUANTAS PARCELAS? '))
+	parcela = total / totparc
+	print('SUA COMPRA SERÁ PARCELADA EM {}X DE R${:.2f} COM JUROS'.format(totparc, parcela))
+else:
+	total = 0
+	print('OPCÃO INVÁLIDA DE PAGAMENTO. TENTE NOVAMENTE!')
+print('SUA COMPRA DE R${:.2f} VAI CUSTAR R${:.2f} NO FINAL.'.format(preço, total))
+---------------------------------------------------------------------------------JOKENPO (EX45)
+from random import randint
+itens = ('PEDRA', 'PAPEL', 'TESOURA')
+computador = randint(0, 2)
+print('''SUAS OPÇÕES:
+[ 0 ] PEDRA
+[ 1 ] PAPEL
+[ 2 ] TESOURA''')
+jogador = int(input('QUAL E A SUA JOGADA? '))
+print('-=-' * 12)
+print('COMPUTADOR JOGOU {}'.format(itens[computador]))
+print('JOGADOR JOGOU {}'.format(itens[jogador]))
+print('-=-' * 12)
+if computador == 0: # computador jogou PEDRA
+	if jogador == 0:
+		print('EMPATE')
+	elif jogador == 1:
+		print('JOGADOR VENCE')
+	elif jogador == 2:
+		print('COMPUTADOR VENCE')
+	else:
+		print('JOGADA INVÁLIDA!')
+elif computador == 1: # computador jogou PAPEL
+	if jogador == 0:
+		print('COMPUTADOR VENCE')
+	elif jogador == 1:
+		print('EMPATE')
+	elif jogador == 2:
+		print('JOGADOR VENCE')
+	else:
+		print('JOGADA INVÁLIDA!')
+elif computador == 20: # computador jogou TESOURA
+	if jogador == 0:
+		print('JOGADOR VENCE')
+	elif jogador == 1:
+		print('COMPUTADOR VENCE')
+	elif jogador == 2:
+		print('EMPATE')
+	else:
+		print('JOGADA INVÁLIDA!')
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+CONTAGEM REGRESSIVA ---------------------------------------- EX 46
+from time import sleep
+for cont in range(10, -1, -1):
+	print(cont)
+	sleep(0.5)
+print('BUM! FOGOS!')
+--------------------------------------------------------------------------------
+MOSTRAR PARES NO INTERVALO DE 1 A 50-----------------------------EX 47
+for n in range(2, 51, 2):
+	print(n, end=' ')
+print('ACABOU')
+--------------------------------------------------------------------------------
+SOMAR NÚMEROS ÍMPARES E MÚLTIPLOS DE 3 NO INTERVALO DE 1 A 500 -----EX 48
+soma = 0
+cont = 0
+for c in range(1, 501, 2):
+	if c % 3 == 0:
+		soma += c
+		cont += 1
+print('A SOMA DE TODOS OS {} VALORES SOLICITADOS É {}'.format(cont, soma))
+-------------------------------------------------------------------------------
+MOSTRAR TABUADA DE NÚMERO ESCOLHIDO -----------------------------------EX 49
+num = int(input('DIGITE UM NÚMERO PARA VER SUA TABUADA: '))
+for c in range(1, 11):
+	print('{} X {:2} = {}'.format(num, c, num*c))
+------------------------------------------------------------------------------
+LER 6 NUMEROS E MOSTRAR SOMA DOS PARES. DESCOSIDERAR IMPARES------------EX 50
+som = 0 
+cont = 0 for c in range(1, 7):
+	num = int(input('DIGITE O {} VALOR: '.format(c)))
+	if num % 2 == 0
+		soma += num
+		cont += 1
+print('VOCÊ INFORMOU {} NÚMEROS PARES E A SOMA FOI {}.'.format(cont.soma))
+------------------------------------------------------------------------------------
+LER NÚMERO E RAZÃO DE P.A. E MOSTRAR 10 PRIMEIROS TERMOS DA PROGRESSÃO----EX 51
+primeiro = int(input('PRIMEIRO TERMO: '))
+razão = int(input('RAZÃO: '))
+décimo = primeiro + (10 - 1) * razão
+for c in range(primeiro, décimo + razão, razão):
+	print('{} '.format(c), end='-> ')
+print('ACABOU')
+-----------------------------------------------------------------------------------
+LER NÚMERO INTEIRO E RETORNE SE É OU NÃO NÚMERO PRIMO ------------------EX 52
+num = int(input('DIGITE UM NÚMERO: '))
+tot = 0 
+for c in range(1, num + 1):
+	if num % c == 0:
+		print('\033[33m', end='')
+		tot += 1
+	else:
+		print('\033[31m', end='')
+	print('{} '.format(c), end='')
+print('\n\033[mO NÚMERO {} FOI DIVISÍVEL {} VEZES'.format(num, tot))
+if tot == 2:
+	print('E POR ISSO ELE É PRIMO!')
+else:
+	print('E POR ISSO ELE NÃO É PRIMO!')
+-------------------------------------------------------------------------------------
+LER FRASE E INFORMAR SE É UM PALÍNDROMO -------------------------------------EX 53
+frase = str(input('DIGITE UMA FRASE: ')).strip().upper()
+palavras = frase.split()
+junto = ''.join(palavras)
+inverso = junto[::-1]
+print('O INVERSO DE {} É {}'.format(junto, inverso))
+if inverso == junto:
+	print('TEMOS UM PALÍNDROMO!')
+else:
+	print('A FRASE DIGITADA NÃO É UM PALÍNDROMO!')
+----------------------------------------------------------------------------------------
+LER ANO DE NASCIMENTO E INFORMAR SE ATINGIRAM MAIORIDADE --------------------------EX 54
+from datetime impor date
+atual = date.today().year
+totmaior = 0
+totmenor = 0
+for pess in range(1, 8):
+	nasc = int(input('EM QUE ANO A {}a PESSOA NASCEU? '. format(pess)))
+	idade = atual - nasc
+	if idade >= 21:
+		totmaior += 1
+	else:
+		totmenor += 1
+print('AO TODO TIVEMOS {} PESSOAS MAIORES DE IDADE'.format(totmaior))
+print('E TAMBÉM TIVEMOS {} PESSOAS MENORES DE IDADE'.format(totmenor))
+---------------------------------------------------------------------------------------
+LER O PESO DE 5 PESSOAS E MOSTRAR MAIOR E MENOR PESO----------------------------- EX 55
+maior = 0
+menor = 0
+for p in range(1, 6):
+	peso = float(input('PESO DA {}a PESSOA: '.format(p)))
+	if p == 1 
+		maior = peso
+		menor = peso
+	else:
+		if peso > maior:
+			maior = peso
+		if peso < menor:
+			menor = peso
+print('O MAIOR PESO LIDO FOI DE {}KG'.format(maior))
+print('O MENOR PESO LIDO FOI DE {}KG'.format(menor))
+-----------------------------------------------------------------------------
+LER NOME, IDADE E SEXO E MOSTRAR A MÉDIA DE IDADE, NOME DO HOMEM MAIS VELHO E MULHERES COM MENOS DE 20 ANOS-----------------------------------EX 56
+somaidade = 0
+mediaidade = 0
+maioridadehomem = 0
+nomevelho = ''
+totmulher20 = 0
+for p in range(1, 5):
+	print('------ {}ª PESSOA ------'.format(p))
+	nome = str(input('NOME: ')).strip()
+	idade = int(input('IDADE: '))
+	sexo = str(input('SEXO [M/F]: ')).strip()
+	somaidade += idade
+	if p == 1 and sexo in 'Mm':
+		maioridadehomem = idade
+		nomevelho = nome
+	if sexo in 'Mm' and idade > maioridadehomem:
+		maioridadehomem = idade
+		nomevelho = nome
+	if sexo in 'Ff' and idade < 20:
+		totmulher20 += 1
+mediaidade = somaidade /4
+print('A MÉDIA DE IDADE DO GRUPO É DE {} ANOS'.format(mediaidade))
+print('O HOMEM MAIS VELHO TEM {} ANOS E SE CHAMA {}. '.format(maioridadehomem, nomevelho))
+print('AO TODO SÃO {} MULHERES COM MENOS DE 20 ANOS.'.format(totmulher20))
+-------------------------------------------------------------------------------
+ESTRUTURA WHILE (AULA 14)
+apple
+passo
+pega
+while not apple:
+	if chão:
+		passo
+	if buraco:
+		pula
+	if coin:
+		pega
+pega
+
+c = 1
+while c < 10:
+	print(c)
+	c = c + 1
+print('FIM!')
+-------------------
+r = 'S'
+while r == 'S':
+	n = int(input('DIGITE UM VALOR: '))
+	r = str(input('QUER CONTINUAR? [S/N] ')).upper()
+print('FIM')
+----------------------------------------------------------------------	
+INFORMAR SEXO (APENAS COM M OU F). CASO INFORMADO ERRADO, PEÇA A DIGITAÇÃO NOVAMENTE--EX 57
+sexo = str(input(('INFORME SEU SEXO: [M/F] ')).strip().upper()[0]
+while sexo noi in 'MmFf':
+	sexo = str(imput('DADOS INVÁLIDOS. POR FAVOR, INFORME SEU SEXO: ')).strip().upeer()[0]
+print('SEXO {} REGISTRADO COM SUCESSO'.format(sexo))
+----------------------------------------------------------------------------------------------
+JOGO DA ADIVINHAÇÃO (NÚMERO DE 0 A 10)-------------------------------------EX 58
+from random import randint
+computador = randint(0, 10)
+print('SOU SEU COMPUTADOR... ACABEI DE PENSAR EM UM NÚMERO ENTRE 0 E 10.')
+print('SERÁ QUE VOCÊ CONSEGUE ADIVINHAR QUAL FOI? ')
+acertou = false
+palpites = 0
+while not acertou:
+	jogador = int(input('QUAL É O SEU PALPITE? '))
+	palpites += 1
+	if jogador == computador:
+		acertou = True
+	else:
+		if jogador < computador:
+			print('MAIS... TENTE MAIS UMA VEZ.')
+		elif jogador > computador:
+			print('MENOS... TENTE MAIS UMA VEZ.')
+print('ACERTOU COM {} TENTATIVAS. PARABÉNS!'.format(palpites))
+------------------------------------------------------------------------------------------
+LER 2 VALORES E COM MENU DE OPERAÇÕES----------------------------EX 59
+from time import sleep
+n1 = int(imput(('PRIMEIRO VALOR: '))
+n2 = int(input(('SEGUNDO VALOR: '))
+opção = 0
+while opção != 5:
+	print('''    [ 1 ] SOMAR
+     [ 2 ] MULTIPLICAR
+     [ 3 ] MAIOR
+     [ 4 ] NOVOS NÚMEROS
+     [ 5 ] SAIR DO PROGRAMA'''))
+	opção = int(input('>>>>>>QUAL É A SUA OPÇÃO? '))
+	if opção == 1:
+		soma = n1 + n2
+		print('A SOMA ENTRE {} E {} É {}'.format(n1, n2, soma))
+	elif opção == 2:
+		produto = n1 * n2
+		print('O RESULTADO DE {} X {} É {}'.format(n1, n2, produto))
+	elif opção == 3:
+		if n1 > n2:
+			maior = n1
+		else:
+			maior = n2
+		print('ENTRE {} E {} O MAIOR VALOR É {}'.format(n1, n2, maior))
+	elif opção == 4:
+		print('INFORME OS NÚMEROS NOVAMENTE:')
+		n1 = int(imput(('PRIMEIRO VALOR: '))
+		n2 = int(input(('SEGUNDO VALOR: '))
+	elif opção == 5:
+		print('FINALIZANDO...')
+	else:
+		print('OPÇÃO INVÁLIDA. TENTE NOVAMENTE')
+	print('-=-=- * 9)
+	sleep(1)
+print('FIM DO PROGRAMA! VOLTE SEMPRE!')
+----------------------------------------------------------------------------------------
+CALCULAR O FATORIAL (BIBLIOTECA FACTORIAL - MODO FÁCIL) ----------------------- EX 60
+from math impor factorial
+n = int(input('DIGITE UM NÚMERO PARA CALCULAR O SEU FATORIAL: '))
+f = factorial(n)
+print('O FATORIAL DE {} É {}.'format(n, f))
+-------------------------------------------------------------------
+CALCULAR O FATORIAL (MODO DIFÍCIL) ----------------------- EX 60
+n = int(input('DIGITE UM NÚMERO PARA CALCULAR O SEU FATORIAL: '))
+c = n
+f = 1
+print('CALCULANDO {}! = '.format(n), end='')
+while c > 0:
+	print('{}'.format(c), end='')
+	print(' x ' if c > 1 else ' = ', end='')
+	f *= c
+	c-= 1
+print('{}'format(f))
+---------------------------------------------------------------------------------------------
+LER TERMO E RAZÃO DE P.A. MOSTRANDO 10 PRIMEIROS TERMOS ------EX 61
+print('GERADOR DE P.A.')
+print('=-=-" * 8)
+primeiro = int(input('PRIMEIRO TERMO: '))
+razão = int(input('RAZÃO DA P.A.: '))
+termo = primeiro
+cont = 1
+while con <= 10:
+	print('{} -> '.format(termo), end='')
+	termo += razão
+	cont += 1
+print('FIM')
+-----------------------------------------------------------------------------
+-----------------------------------------------------------------------------
+---------------------------------------EX 67
+-----------------------------------------------------------------------------
+JOGO DO PAR OU IMPAR ---------------------------------------------EX 68
+from random import randint
+v = 0
+while True:
+	jogador = int(input('DIGA UM VALOR: '))
+	computador = randint(0, 10)
+	total = jogador + computador
+	tipo =
+	while tipo not in 'PI':
+		tipo = str(input('PAR OU IMPAR? [P/I] ')).strip().upper()[0]
+	print(f'VOCÊ JOGOU {jogador} E O COMPUTADOR {computador}. TOTAL DE {total}', end='')
+	print('DEU PAR' if total % 2 == 0 else 'DEU IMPAR')
+	if tipo == 'P':
+		if total % 2 == 0:
+			print('VOCÊ VENCEU!')
+			v += 1
+		else:
+			print('VOCÊ PERDEU!')
+			break
+	elif tipo == 'I':
+		if total % 2 = 1:
+			print('VOCÊ VENCEU!')
+		else:
+			print('VOCÊ PERDEU!')
+			break
+	print ('VAMOS JOGAR NOVAMENTE...')
+
+-----------------------------------------------------------------------------
+RECEBE PESSOA COM SEXO E IDADE E DEVOLVE DADOS -------------------------EX 69
+total18 = totH = totM20 = 0
+while True:
+	idade = int(input('IDADE: '))
+	sexo = ''
+	while sexo not in 'MF':
+		sexo = str(input('SEXO: [M/F] ')).strip().upper()[0]
+	if idade >=18:
+		total18 += 1
+	if sexo == 'M':
+		totH += 1
+	if sexo == 'F' and idade < 20:
+		totM20 += 1
+	resp - ''
+	while resp not in 'SN':
+		RESO = STR(INPUT('QUER CONTINUAR? [S/N] ')).strip().upper()[0]
+	if resp =='N':
+		break
+print(f'TOTAL DE PESSOAS COM MAIS DE 18 ANOS: {total18}')
+print(f'AO TODO TEMOS {totH} HOMENS CADASTRADOS')
+print(f'AO TODO TEMOS {totM20} MULHERES COM MENOS DE 20 ANOS')
+
+-----------------------------------------------------------------------------
+RECEBE PRODUTO, PREÇO E MOSTRA PRODUTO MAIS BARATO E MAIS CARO (LOJA) ---- EX 70
+total = totalmil = menor = cont = 0
+barato = ''
+while True:
+	produto = str(input('NOME DO PRODUTO: '))
+	preço = float(input('PREÇO: R$'))
+	cont += 1
+	total += preço
+	if preço > 1000:
+		totalmil += 1
+	if cint == 1 or preço < menor:
+		menor = preço
+		barato = produto
+	resp = ' '
+	while resp not in 'SN':
+		resp = str(input('QUER CONTINUAR? [S/N] ')).strip().upper() [0]
+	if resp == "N":
+		break
+print(':-^40}'.format('FIM DO PROGRAMA '))
+print(f'O TOTAL DA COMPRA FOI R${total:2f}')
+print(f'TEMOS {totalmil} produtos custando mais de R$1000.00')
+print(f'O PRODUTO MAIS BARATO FOI {barato} QUE CUSTA R${menor:.2f}')
+--------------------------------------------------------------------------------
+SIMULADOR CAIXA ELETRÔNICO ------------------------------------- EX 71
+print('=' * 30)
+print('{:^30}'.format('BANCO CURSO EM VÍDEO'))
+print('=' * 30)
+valor = int(input('QUE VALOR VOCÊ QUER SACAR? R$'))
+total = valor
+ced = 50
+totalced = 0
+while True:
+	if total >= ced:
+		total -= ced:
+		totalced += 1
+	else:
+		if totalced > 0:
+			print(f'TOTAL DE {totalced} CÉDULAS DE R${ced}'}
+		if ced == 50:
+			ced = 20
+		elif ced == 20:
+			ced = 10
+		elif ced == 10:
+			ced = 1
+		totalced = 0
+		if total == 0:
+			break
+print('=' * 30)
+print('VOLTE SEMPRE AO BANCO C.E.V.! TENHA UM BOM DIA!')
+------------------------------------------------------------------------------------
+TUPLA COM CONTAGEM DE 0 A 20-------------- EX 72
+cont = ('ZERO', 'UM', 'DOIS', 'TRÊS', 'QUATRO', 'CINCO',
+	'SEIS', 'SETE', 'OITOD', 'NOVE', 'DEZ',
+	'ONZE', 'DOZE', 'TREZE', 'CATORZE', 'QUINZE',
+	'DEZESSEIS', 'DEZESSETE', 'DEZOITO', 'DEZENOVE', 'VINTE')
+while True:
+	num = int(input('DIGITE UM NÚMERO ENTRE 0 E 20: '))
+	if 0 <= num <= 20:
+		break
+	print('TENTE NOVAMENTE. '), end=' ')
+print(f'VOCÊ DIGITOU O NÚMERO {cont[]}')
+----------------------------------------------------------------------------------
+FUNCIONALIDADES E TABELA BRASILEIRÃO (20 TIMES, 5 PRIMEIROS, 4 ÚLTIMOS, ALFABÉTICA)-----EX 73
+times = ('CORINTHIANS, PALMARES, SANTOS, GRÊMIO,
+	'CRUZEIRO, FLAMENGO, VASCO, CHAPECOENSE, ATLÉTICO MG', 
+	'BOTAFOGO', 'ATLÉTICO PR', 'BAHIA', 'SÃO PAULO', 'FLUMINENSE',
+	'SPORT', 'VITÓRIA', 'CORITIBA', 'AVAÍ', 'PONTE PRETA', 'ATLÉTICO GO')
+print(-= * 15)
+print(f'LISTA DE TIMES DO BRASILEIRÃO: {times}')
+print(-= * 15)
+print(f'OS 5 PRIMEIROS TIMES SÃO: {times[0:5]}')
+print(-= * 15)
+print(f'OS 4 ÚLTIMOS TIMES SÃO: {times[-4:]}')
+print(-= * 15)
+print(f'TIMES EM ORDEM ALFABÉTICA: {sorted(times)}')
+print(-= * 15)
+print(f'O CHAPECOENSE ESTÁ NA {times.index("CHAPECOENSE')+1}a POSIÇÃO')
+-------------------------------------------------------------------------------------------------
+TUPLA QUE GERA 5 NÚMEROS ALEATÓRIOS E INDICA MAIOR E MENOR DA TUPLA -------------EX 74
+from rando, import randint
+numeros = (randint(1, 10), randint(1, 10), randint(1, 10),
+	randint(1, 10, randint(1, 10))
+print('OS VALORES SORTEADOS FORAM: ', end= ' ')
+for n in numeros:
+	print(f'{n} ', end='')
+print(f'\nO MAIOR VALOR SORTEADO FOI {max(numeros)}')
+print(f'O MENOR VALOR SORTEADO FOI {min(numeros)}')
+------------------------------------------------------------------------------------------------
+TUPLA QUE RECEBE 4 VALORES E INFORMA SE 9 OU 3 FROAM DIGITADOS--------------------- EX 75
+num = (int(input('DIGITE UM NÚMERO: '))
+	(int(input('DIGITE OUTRO NÚMERO: '))
+	(int(input('DIGITE MAIS UM NÚMERO: '))
+	(int(input('DIGITE O ÚLTIMO NÚMERO: '))
+print(f'VOCÊ DIGITOU OS VALOReS {num}')
+print(f'O VALOR 9 APARECEU{num.cont(9)} VEZES!')
+if 3 in num:
+	print(f'O VALOR 3 APARECEU NA {num.index(3)+1}a POSIÇÃO')
+else:
+	print(f'O VALOR 3 NÃO FOI DIGITADO EM NENHUMA POSIÇÃO')
+print('OS VALORES PARES DIGITADOS FORAM ', end=' ')
+for n in num:
+	if n % 2 == 0:
+		print(n, end=' ')
+----------------------------------------------------------------------------------------------
+LISTA DE PREÇOS MAT ESCOLAR ----------------------------------EX 76
+listagem = 	('LÁPIS, 1.75,
+		 'BORRACHA', 2,
+       		 'CADERNO', 15.90,
+		 'ESTOJO', 25,
+		 'TRANSFERIDOR', 4.20,
+		 'COMPASSO', 9.99,
+		 'MOCHILA', 120.32,
+		 'CANETAS', 22.30, 
+		 'LIVRO', 34.90)
+print('-' * 40)
+print(f'{"LISTAGEM DE PREÇOS":^40}')
+print('-' * 40)
+for pos in range(0, len(listagem)):
+	if pos % 2 ==0
+		print(f'{listagem[pos]:.<30}',end='')
+	else:
+		print(f'{listagem[pos]:.>7.2f}')
+print('-' * 40)
+--------------------------------------------------------------------------------------------------------
+ANALISAR PALAVRAS E MOSTRAR AS VOGAIS PRESENTES ------- EX 77
+palavras = ('aprender, 'programar', 'linguagem', 'pyhon', 'curso', 'gratis', 'estudar', 'praticar', 'trabalhar, mercado, programador, 'futuro')
+for p in palavras:
+	print(f'\nNa palavra {p.upper()} temos ', end=' ')
+	for letra in p:
+		if letra.lower() in 'aeioiu':
+			print(letra, end=' ')
+-------------------------------------------------------------------------------------------------------
+Aula 17 LISTAS (SEMPRE ENTRE [ ])
+valores = []
+valores.append(5)
+valores.append(9)
+valores.append(4)
+for c, v in enumerate(valores):
+	print(f'NA POSIÇÃO {c} ENCONTREI O VALOR {v}!')
+print('CHEGUEI AO FINAL DA LISTA.')
+-------------------------------------------------------------------------------------
+MAIOR E MENOR VALORES NA LISTA----------------EX 78
+listanum = []
+mai = 0
+men = 0
+for c in range(0, 5):
+	listanum.append(int(input(f'DIGITE UMA VALOR PARA A POSIÇÃO {c}: ')))
+	if c == 0:
+		mai = men = listanum[c]
+	else:
+		if listanum[c] > mai:
+			mai = listanum[c]
+		if listanum[c] < men:
+			men = listanum[c]
+print('=-' * 30)
+print((f'VOCE DIGITOU OS VALORES {listanum}')
+print(f'O MAIOR VALOR DIGITADO FOI {mai} NAS POSIÇÕES ', end= '')
+for i, v in enumerate(listanum):
+	if v == mai:
+		print(f'{i}... ', end='')
+print()
+print(f'O MENOR VALOR DIGITADO FOI {men} NAS POSIÇÕES ', end= '')
+for i, v in enumerate(listanum):
+	if v == men:
+		print(f'{i}... ', end='')
+print()
+-------------------------------------------------------------------------------------
+VALORES ÚNICOS EM UMA LISTA --------------EX 79
+números = list()
+while True:
+	n = int(input('DIGITE UM VALOR: '))
+	if n not in números:
+		números.append(n)
+		print('VALOR ADICIONADO COM SUCESSO...')
+	else:
+		print('VALOR DUPLICADO! NÃO SERÁ ADICIONADO...')
+	r = str(input(QUER CONTINUAR? [S/N] '))
+	if r in 'Nn':
+print('-=' * 30)
+números.sort()
+print(f'VOCÊ DIGITOU IS VALORES {números}')
+-------------------------------------------------------------------------------------
+LISTA ORDENADA SEM REPETIÇÕES ----------------- EX 80
+lista = []
+for c in range(0, 5):
+	n = int(input('DIGITE UM VALOR: '))
+	if c == 0 or n > lista[-1]:
+		lista.append(n)
+		print('ADICIONADO AO FINAL DA LISTA...')
+	else:
+		pos = 0
+		while pos < len(lista):
+			if n <= lista[pos]:
+				lista.insert(pos, n)
+				print(f'ADICIONADO NA POSIÇÃO {pos} DA LISTA...')
+				break
+			pos += 1
+print('-= * 30)
+PRINT(f'OS VALORES DIGITADOS EM ORDEM FORAM {lista}')
+-------------------------------------------------------------------------------------
+LÊ VÁRIOS NÚMEROS, COLOCA EM LISTA E MOSTRA QUANTOS DIGITADOS, ORDENANDOS DECRESCENTE E SE O Nº 5 ESTÁ OU NÃO NA LISTA -------------------------EX 81
+valores = []
+while True:
+	valores.append(int(input('DIGITE UM VALOR: ')))
+	resp = str(input('QUER CONTINUAR? [S/N] '))
+	if resp in 'Nn':
+		break
+print('-=' * 30)
+print(f'VOCÊ DIGITOU {len(valores)} ELEMENTOS.')
+valores.sort(reverse=True)
+print(f'OS VALORES EM ORDEM DECRESCENTE SÃO {valores}')
+if 5 in valores:
+	print('O VALOR 5 FAZ PARTE DA LISTA!')
+else:
+	print('O VALOR 5 NÃO FOI ENCONTRADO NA LISTA!')
+-------------------------------------------------------------------------------------
+DIVIDINDO VALORES EM VÁRIAS LISTAS --------------- EX 82
+num = list()
+pares = list()
+ímpares = list()
+while True:
+	num.append(int(input('DIGITE UM NÚMERO: ')))
+	resp = str(input('QUER CONTINUAR? [S/N] '))
+	if resp in "Nn":
+		break
+for i, v in enumerate(num):
+	if v % 2 == 0:
+		pares.append(v)
+	elif v % 2 == 1:
+		ímpares.append(v)
+print('-=' * 30)
+print(f'A LISTA COMPLETA É {num}')
+print(f'A LISTA DE PARES É {pares}')
+print(f'A LISTA DE ÍMPARES É {impares}')
+-------------------------------------------------------------------------------------
+AVALIA EXPRESSÃO COM PARÊNTESES E RETORNA SE ESTÁ CORRETA DE ACORDO COM NÚMERO DE PARÊNTES ABERTOS E FECHADOS----------------------EX 83
+expr = str(input('DIGITE A EXPRESSÃO: '))
+pilha = []
+for símb in expr:
+	if sím == '(':
+		pilha.append('(')
+	elif símb == ')':
+		if len(pilha) > 0:
+			pilha.pop()
+		else:
+			pilha. append(')')
+			break
+if len(pilha) == 0:
+	print('SUA EXPRESSÃO ESTÁ VÁLIDA!')
+else:
+	print('SUA EXPRESSÃO ESTÁ ERRADA!')
+-------------------------------------------------------------------------------------
+AULA 18 (LISTAS PARTE 2)
+LISTAS DENTRO DE LISTAS
+
+LISTA PESSOAS     [[ PEDRO | 25], [MARIA | 19], [JOÃO | 32]]
+LISTA 0 E DENTRO          0             1              2
+PRINT(PESSOAS[0][0]) PEDRO
+PRINT(PESSOAS[0][1]) 25
+PRINT(PESSOAS[1][0]) MARIA...
+
+galera = [['JOÃO', 19], ['ANA', 33], ['JOAQUIM', 13], ['MARIA', 45]]
+for p in galera:
+	print(f'{p[0]} TEM {p[1]} ANOS DE IDADE.')
+----------------------------------------------------------------------------
+galera = list()
+dado = list()
+totmaior = totmenor = 0
+for c in range(0, 3):
+	dado.append(str(input('NOME: ')))
+	dado.append(int(input('IDADE: ')))
+	galera.append(dad0[:])
+	dado.clear()
+
+for p in galera:
+	if p[1] >=21:
+		print(f'{p[0]} É MAIOR DE IDADE.')
+		totmaior += 1
+	else:
+		print(f'{p[0]} É MENOR DE IDADE.')
+		totmenor += 1
+-----------------------------------------------------------------------------
+NOME E PESO COM ANÁLISE DE DADOS ------------------ EX 84
+
+temp = []
+princ = []
+mai = men = 0
+while True:
+	temp.append(str(input('NOME: ')))
+	temp.append(float(input('PESO: ')))
+	if len(princ) == 0:
+		mai = men = temp[1]
+	else:
+		if temp[1] > mai:
+			mai = temp[1]
+		if temp[1] < men:
+			men = temp[1]
+	prin.append(temp[:])
+	temp.clear()	resp = str(input('QUER CONTINUAR? [S/N] '))
+	if resp in 'Nn":
+		break
+print(-=' * 30)
+print(f'AO TODO, VOCÊ CADASTROU {len(prin)} PESSOAS. ')
+print(f'O MAIOR PESO FOI DE {mai}KG. PESO DE ', end='')
+for p in princ:
+	if p[1] == mai:
+		print(f'[{p[0]}] ', end='')
+print()
+print(f'O MENOR PESO FOI DE {men}KG. PESO DE ',end='')
+for p in princ:
+	if p[1] == men:
+		print(f'[{p[0]}] ', end='')
+print()
+---------------------------------------------------------------------------
+LISTA DENTRO DE OUTRA LISTA ---------------------- EX 85
+núm = [[], []]
+valor = 0
+for c in range(1, 8):
+	valor = int(input(f'DIGITE O {c}o. VALOR: '))
+	if valor % 2 == 0:
+		núm[0].append(valor)
+	else:
+		núm[1].append(valor)
+print('-=' * 30)
+núm[0].sort()
+núm[1].sort()
+print(f'OS VALORES PARES DIGITADOS FORAM: {núm[0]}')
+print(f'OS VALORES ÍMPARES DIGITADOS FORAM: {núm[1]}')
+---------------------------------------------------------------------------
+PROGRAMA COM MATRIZ 3X3 (9 ELEMENTOS) --------------------EX 86
+matriz = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+for l in range(0, 3):
+	for c in range(0, 3):
+		matriz[l][c] = int(input(f'DIGITE UM VALOR PARA [{l}, {c}]: '))
+print(	-=' * 30)
+for l in range(0, 3):
+	for c in range(0, 3):
+		print(f'[{matriz[l][c]:^5}]', end='')
+	print()
+-----------------------------------------------------------------------------
+OUTRA MATRIZ 3X3 ---------------------------EX 87
+matriz = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+spar = mai = scol = 0
+for l in range(0, 3):
+	for c in range(0, 3):
+		matriz[l][c] = int(input(f'DIGITE UM VALOR PARA [{^l, {c}]: '))
+print('-=' * 30)
+for l in range(0, 3):
+	for c in range(0, 3):
+		print(f'[{matriz[l][c]:^5}]', end='')
+		if matriz[l][c] % 2 ==0:
+			spar += matriz[l][c]
+	print()
+print('-=' * 30)
+print(f'A SOMA DOS VALORES PARES É {spar}')
+for l in range(0, 3):
+	scol += matriz[l][2]
+print(f'A SOMA DOS VALORES DA TERCEIRA COLUNA É {scol}.')
+for c in range(0, 3):
+	if c == 0:
+		mai = matriz[1][c]
+	elif matriz[1][c] > mai:
+		mai = matriz[1][c]
+print(f'O MAIOR VALOR DA SEGUNDA LINHA É {MAI}.')
+-------------------------------------------------------------
+JOGA NA MEGA SENA (GERA LISTA COM 6 NÚMEROS (SEM REPETIR) -------- EX 88
+from random import randint
+from time import sleep
+lista = list()
+jogos = list()
+print('-' * 30)
+print('     JOGA NA MEGA SENA     ')
+print('-' * 30)
+quant = int(input('QUANTOS JOGOS VOCÊ QUER QUE EU SORTEIE? '))
+tot = 1
+while tot <= quant:
+	cont = 0
+	while True
+		num = randint(1, 60)
+		if num not in lista:
+			list.append(lista(num)
+			cont += 1
+		if cont >= 6:
+			break
+	lista.sort()
+	jogos.append(lista[:])
+	lista.clear()
+	tot += 1
+print('-= * 3, f' SORTEADNO {quant} JOGOS ', '-=' * 3)
+for i, l in enumerate(jogos):
+	print(f'JOGO {i+1}: {l}')
+	sleep(1)
+print('-=' * 5, '< BOA SORTE! >', '-=' * 5)
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+BOLETIM COM LISTAS COMPOSTAS -------------EX 89
+ficha = list()
+while True:
+	nome = str(input('NOME: '))
+	nota1 = float(input('NOTA 1: '))
+	nota2 = float(input('NOTA 2: '))
+	media = (nota1 + nota2) / 2
+	ficha.append([nome, [nota1, nota2], media])
+	resp = str(input('QUER CONTINUAR? [S/N] '))
+	if resp in 'Nn':
+		break
+print('-=' * 30)
+print(f'{"No.":<4}{"NOME":<10}{"MÉDIA":>8}')
+print('-' * 26)
+for i, a in enumerate(ficha):
+	print(f'{i:<4}{a[0]:<10}{a[2]:>8.1f}')
+while True:
+	print('-' * 35)
+	opc = int(input('MOSTRAR NOTAS DE QUAL ALUNO? (999 INTERROMPE): '))
+	if opc == 999:
+		print('FINALIZANDO...')
+		break
+	if opc <= len(ficha) - 1 :
+		print(f'NOTAS DE {ficha[opc][0]} SÃO {ficha[opc][1]}')
+print('<<< VOLTE SEMPRE! >>>')
+--------------------------------------------------------------------------
+MOSTRAR NOME, MÉDIA E SITUAÇÃO DO ALUNO ------------EX 90
+aluno = dict()
+aluno['nome'] = str(input('NOME: '))
+aluno['média'] = float(input(f'MÉDIA DE {aluno["nome"]{: '))
+if aluno['média'] >= 7:
+	aluno['situação'] = 'APROVADO!'
+elif 5<= aluno['média'] < 7:
+	aluno ['situação'] = 'RECUPERAÇÃO'
+else:
+	aluno['situação'] = 'REPROVADO'
+print('-=' * 30)
+for k, v in aluno.itens():
+	print(f' - {k} É IGUAL A {v}')
+--------------------------------------------------------------------------
+JOGO DADO COM RESULTADOS ALEATÓRIOS E MOSTRAR RANKING VENCEDOR ---- EX 91
+from random import randint
+from time import sleep
+from operator import itemgetter
+jogo = {'jogador1': randint(1, 6),
+	'jogador2': randint(1, 6),
+	'jogador3': randint(1, 6),
+	'jogador4': randint(1, 6)}
+ranking = list()
+print('VALORES SORTEADOS: ')
+for k, v in jogo. itens():
+	print(f'{k} TIROU {v} NO DADO.')
+	sleep(1)
+ranking = sorted(jogo.itens(), key=itemgetter(1), reverse=Tru)
+print('-=' * 30 )
+print(' == RANKING DOS JOGADORES ==')
+for 1, v in enumerate(ranking):
+	print(f' {i+1º LUGAR: {v[0]} COM {v[1]}.')
+	sleep(1)
+----------------------------------------------------------------------------
+LER NOME, NASCIMENTO E CTPS. RECEBE ANO NASCIMENTO E INFORMA OS DADOS E APOSENTADORIA ------ EX 92
+from datetime import datetime
+dados = dict()
+dados['nome'] = str(input('NOME: '))
+nasc = int(input('ANO DO NASCIMENTO: '))
+dados['idade'] = datetime.now().year - nasc
+dados ['ctps'] = int(input('CARTEIRA DE TRABALHO (0 NÃO TEM): '))
+if dados['ctps'] != 0:
+	dados['contratação'] = int(input('ANO DA CONTRATAÇÃO: '))
+	dados['salário'] = float(input('SALÁRIO: R$'))
+	dados['aposentadoria'] = dados['idade'] + ((dados['contratação'] + 35) - datetime.now().year)
+print('-=' * 30)
+for k, v in dados.items():
+	print(f' - {k} tem o valor {v}')
+----------------------------------------------------------------
+PLAYER, PARTIDAS, GOLS, QTOS GOLS POR PARTIDA ------------- EX 93
+jogador = dict()
+partidas = list()
+jogador['nome'] = str(input('NOME DO JOGADOR: '))
+tot = int(input(f'QUANTAS PARTIDAS {jogador["nome"]} JOGOU? '))
+for c in range(0, tot):
+	partidas.append(int(input(f' QUANTOS GOLS NA PARTIDA {c}? ')))
+jogador['gols'] = partidas[:]
+jogador['total'] = sum(partidas)
+print('-=' * 30)
+print(jogador)
+print('-=' * 30)
+for k, v in jogador.items():
+	print(f'O CAMPO {k} TEM O VALOR {v}')
+print('-=' * 30)
+print(f'O JOGADOR {jogador['nome']} JOGOU {len(jogador["gols"])} PARTIDAS.')
+for i, v in enumerate(jogador['gols']):
+	print(f' => NA PARTIDA {i}, FEZ {v} GOLS.')
+print(f'FOI UM TOTAL DE {jogador["total"]} GOLS.')
+-------------------------------------------------------------------------
+----------------------------------------------------------------------
+LER NOME, SEXO, IDADE E MOSTRE NÚMERO DE PESSOAS, MÉDIA DE IDADE, MULHERES E ACIMA DE IDADE ---- EX 94
+galera = list()
+pessoa = dict()
+soma = media = 0
+while True:
+	pessoa.clear()
+	pessoa['nome'] = str(input('NOME: '))
+	while True:
+		pessoa['sexo'] = str(input('SEXO: [M/F] ')). upper()[0]
+		if pessoa['sexo' in 'MF':
+			break
+		print('ERRO! POR FAVOR, DIGITE APENAS M OU F.')
+	pessoa['IDADE] - INT(INPUT('IDADE: '))
+	soma += pessoa['idade'
+	galera.append(pessoa.copy())
+	while True:
+		resp == str(input('QUER CONTINUAR? [S/N] ')). upper()[0]
+		if resp in 'SN':
+			break
+		print('ERRO! RESPONDA APENAS S OU N. ')
+	if resp == 'N':
+		break
+print('-=' * 30)
+print(f'A) AO TODO TEMOS {len(galera)} PESSOAS CADASTRADAS. ')
+média = soma / len(galera)
+print(f'B) A MÉDIA DE IDADE É DE {media:5.2f} anos.')
+print(f'C) AS MULHERES CADASTRADAS FORAM ', END='')
+for p in galera:
+	if p['sexo'] in Ff':
+		print(f'{p[nome'. end='')
+print()
+print('D) LISTA DAS PESSOAS QUE ESTÃO ACIMA MÉDIA: ')
+for p in galera:
+	if p['idade'] >= média:
+		print (f'{k} = {v}; ', end='')
+		for k, v in p.items():
+			print ('(f'{k} = {v}; ', end='')
+		print()
+print('<< ENCERRADO >>')
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+# APRIMORAR O EX 93 PARA QUE FUNCIONE COM VÁRIOS JOGADORES, INCLUINDO SISTEMA DE VISUALIZAÇÃO DE DETALHES DO APROVEITAMENTO DE CADA JOGADOR. --- EX 95
+time = list()
+jogador = dict()
+partidas = list()
+
+while True:
+	jogador['nome'] = str(input('NOME DO JOGADOR: '))
+	tot = int(input(f'QUANTAS PARTIDAS {jogador["nome"]} JOGOU? '))
+	partidas.clear()
+	for c in range(0, tot):
+		partidas.append(int(input(f' QUANTOS GOLS NA PARTIDA {c}? ')))
+	jogador['gols'] = partidas[:]
+	jogador['total'] = sum(partidas)
+	time.append(jogador.copy())
+	while True:
+		resp = str(input('QUER CONTINUAR? [S/N] ')).upper()[0]
+		if resp in 'SN':
+			break
+		print('ERRO! RESPONDA APENAS S OU N.')
+	if resp == 'N':
+		break
+print('-=' * 30)
+print('cod ', end='')
+for i in jogador.keys():
+	print(f'{i:<15}', end='')
+print()
+print('-' * 40)
+for k, v in enumerate(time):
+	print(f'{k:>3} ', end='')
+	for d in v.values():
+		print(f'{str(d):<15}', end='')
+	print()
+print('-' * 40)
+-----------------------------------------------------------------------------
+# AULA 20 FUNÇÕES
+# FUNÇÕES SÃO ESCRITAS PELO COMANDO 'DEF'
+# FUNÇÃO DE SOMA:
+def soma(a, b):
+	print(f'A = {a} e B = {b}')
+	s = a + b
+	print(f'A SOMA A + B É IGUAL A {s}')
+------------------
+# AULA 20 -- PROGRAMA CONTADOR (USANDO DESEMPACOTAR)
+def soma(* valores):
+	s = 0
+	for num in valores:
+		s+= num
+	print(f'SOMANDO OS VALORES {valores} TEMOS {s}')
+
+soma(5, 2)
+soma(2, 9, 4)
+
+# AULA 20 -- PROGRAMA CONTADOR (COM LISTA)
+def dobra(list):
+	pos = 0
+	while pos < len(list):
+		list[pos] *= 2
+		pos += 1
+valores = [6, 3, 9, 1, 0, 2]
+dobra(valores)
+print(valores)
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+# CONTROLE DE TERRENOS (CÁLCULO DE ÁREA USANDO FUNÇÕES) -- EX 96
+#----- AQUI TEMOS A FUNÇÃO PRINCIPAL (DEV)-----
+def 	área(l, c): # NESTA LINHA ONDE ESTABELECEMOS PARÂMETROS, (l) SE REFERE A LARGURA E (c) A COMPRIMENTO (TERRENO).
+	area = l * c # CÁLCULO DA FUNÇÃO
+	print(f'A ÁREA DE UM TERRENO {l}X{c} É DE {área}m2.')
+	
+#---- AQUI TEMOS O PROGRAMA PRINCIPAL
+print('CONTROLE DE TERRENOS')
+print('-' * 20)
+l = float(input('LARGURA (m): ')) # ESTAS LINHAS SÃO AS QUE PERMITEM QUE SEJA INSERIDO OS DADOS DE LARGURA E COMPRIMENTO. O (float) SE REFERE A NÚMERO FRACIONADO. (input) REFERE QUE O DADO SERÁ SOLICITADO NA TELA E O TEXTO ENTRE ('') INFORMA A FRASE QUE APARECERÁ NA TELA.
+c = float(input('COMPRIMENTO (m): '))
+área(l, c)
+
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+# ----- FUNÇÃO ESCREVA(). ESCRVA TEXTO QUALQUER COMO PARAMETRO E MOSTRE MENSAGEM COM TAMANHO ADAPTÁVEL -------------- EX 97
+
+def escreva(msg): # PRIMEIRA LINHA DO PROGRAMA PRINCIPAL. (PROGRAMA ESCREVA)
+	tam = len(msg)+ 4 # NESTA LINHA, O "tam = len" VAI SERVIR PARA ESTABELECER QUE AS LINHAS DE SEPARAÇÃO TENHAM O TAMANHO DO TEXTO DIGITADO (msg). O "+4" SERVE PARA QUE HAJA UMA "BORDA", COMEÇANDO E TERMINANDO A LINHA DE SEPARAÇÃO UM POUCO ANTES DO TEXTO
+
+	print('~' * tam) # SERÁ IMPRESSA A LINHA DE '~TILS' DO TAMANHO DA MENSAGEM DIGITADA.
+	print(f'  {msg}') # SERÁ IMPRESSA A (msg) DIGITADA E ALINHADA . DOIS "ESPAÇOS" ANTES DE {msg} GARANTEM O ALINHAMENTO.
+	print('~' * tam) # NOVAMENTE A LINHA DE (~TILS).
+
+# PROGRAMA PRINCIPAL...
+escreva('BERNARDO ALVES QUEIROZ')
+escreva('CURSO DE PYTHON NO YOUTUBE')
+escreva('CURSO EM VÍDEO)
+
+------------------------------------------------------------------------------
+#PROGRAMA COM FUNÇÃO CONTADOR() QUE RECEBA 3 PARÂMETROS: INÍCIO, FIM E PASSO. TEM QUE CONTAR DE 1 A 10... TEM QUE CONTAR DE 10 ATÉ 0... POR FIM, CONTAGEM PERSONALIZADA.-------------------------------- EX 98
+
+from time import sleep # IMPORTADA FUNÇÃO SLEEP PARA INTERVALO DE MOSTRA DO RESULTADO
+
+def contador(i, f, p): # FUNÇÃO COM DADOS DE "início", "fim" e "passo".
+	if p < 0: # NESTA LINHA SE ESTABELECE QUE, SE O PASSO FOR MENOR QUE "", É NECESSÁRIO TRANSFORMÁ-LO EM POSITIVO COM A LINHA DE BAIXO.
+		p *= -1 # ESTA LINHA TRANSFORMA O PASSO NEGATIVO EM POSITIVO MULTIPLICANDO POR (-1).
+	if p == 0 # COMO A FUNÇÃO SE REFERE A CONTAGEM, CASO "P" IGUAL A (0ZERO), ESTALINHA ESTABELECE "P" IGUAL A 1... PODERIA TB INFORMAR COMO ERRO NO PROGRAMA.
+		p = 1 # COMO INFORMADO NA LINHA ACIMA, NO CASO DE P = 0, ESTABELECE P = 1.
+	print('-=' * 20) # LINHA DE SEPARAÇÃO
+	print(f' CONTAGEM DE {i} ATÉ {f} DE {p} EM {p}') #LINHA IMPRESSA NA TELA COM INFORMAÇÃO "CONTAGEM DE "INÍCIO" ATÉ "FIM" DE "PASSO" EM "PASSO".
+	sleep(1.5) # TEMPO DE UMA CONTAGEM PARA A OUTRA...
+	if i < f: # AQUI, É ESTABELECIDO QUE SE O INÍCIO FOR MENOR QUE O FIM (NUMERICAMENTE), A CONTAGEM SERÁ NORMAL, CRESCENTE)
+		cont = i #CONTAGEM DO INÍCIO...
+		while cont <= f: # ENQUANTO CONTAGEM FOR MENOR QUE "f"... NÃO CHEGAR ATÉ O "f", SEGUE CONTANDO.
+			print(f'{cont} ', end='', flush=True) #	ESSA LINHA MOSTRA O CONTADOR NA TELA ATÉ O FIM DO MESMO... O "FLUSH" NO FINAL SERVE PARA QUE AO INVÉS DE AGUARDAR 0.5 SEGUNDO PARA MOSTRAR O CONTADOR INTEIRO, ELE MOSTRA CADA NÚMERO DO CONTADOR A CADA 0.5 SEGUNDO.
+			sleep(0.5)
+			cont += p
+		print('fim')
+	else:
+		cont = 1
+		while cont>= f:
+			print(f'{cont} ', end='', flush=True)
+			sleep(0.5)
+			cont -= p
+		print('FIM')
+
+# PROGRAMA PRINCIPAL
+contador(1, 10, 1)
+contador(10, 0, 2)
+print('-=') * 20)
+print('AGORA É A SUA VEZ DE PERSONALIZAR A CONTAGEM!')
+ini = int(input('INÍCIO: '))
+fim = int(input('FIM:    '))
+pas = int(input('PASSO:  '))
+contador(ini, fim, pas)
+----------------------------------------------------------------------------------------------
+FUNÇÃO QUE DESCOBRE O MAIOR NÚMERO (DESEMPACOTAMENTO DE PARÂMETROS) ------- EX 99
+
+from time import sleep
+
+def maior(* num): # O ASTERÍSCO SERVE PARA INFORMAR QUE DIVERSOS PARÂMETROS SERÃO UTILIZADOS.
+	cont = maior = 0
+	print('-=' * 30)
+	print('ANALISANDO OS VALORES PASSADOS... ')
+	for valor in num:
+		print(f'{valor} ', end= '', flush=True)
+		sleep(0.3)
+		if cont == 0:
+			maior = valor
+		else:
+			if valor > maior:
+				maior = valor
+		cont+= 1
+	print(f'FORAM INFORMADOS {cont} VALORES AO TODO.')
+	print(f'O MAIOR VALOR INFORMADO FOI {maior}.')
+
+#PROGRAMA PRINCIPAL
+maior(2, 9, 4, 5, 7, 1)
+maior(4, 7, 0)
+maior(1, 2,)
+maior(6)
+maior()
+------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
+
+# AULA 21
+# AJUDA INTERATIVA "HELP()"... #DIGITAR HELP() (HELP+ABRE E FECHA PARENTESES())
+# PARA SAIR DA AJUDA INTERATIVA, SÓ DIGITAR "QUIT"
+-------------------------------------------------------------------------------------------
+# AULA 21
+#PARÂMETRO OPCIONAL
+
+def somar(a=0, b=0, c=0): # A FUNÇÃO DA LINHA VAI FAZER A SOMA DE (ABC)... ELES VÊM COM O "=0", PARA O CASO DE ALGUM DOS PARÂMETROS (ABC) NÃO SER INFORMADO E O PROGRAMA NÃO APRESENTAR ERRO.
+	s = a + b + c
+	print(f' A SOMA VALE {s}')
+somar(3, 3, 5) # NESTE CASO, PELA ORDEM, ESTABELECERIA A=3, B=3 E C=5... RESULTADO 11
+
+# OU PODERIA NOMEAR O PARÂMETRO COM IGUAL...
+somar(b=4, c=2) # RESULTADO 6... FUNCIONA SEM INFORMAR O VALOR DE (a), POIS NO INÍCIO SE ESTABELECEU QUE OS PARÂMETROS SÃO OPCIONAIS COLOCANDO-OS NA FUNÇÃO COMO IGUAIS A 0(ZERO).
+------------------------------------------------------------------------------------------------------------
+# AULA 21
+# ESCOPO DE VARIÁVEIS
+
+
+-------------------------------------------------------------------------------------------------------------
+# AULA 21
+# RETORNO DE VALORES
+
+def somar(a=0, b=0, c=0): #FUNÇÃO QUE SOMA (ABC) PARTINDO QUE ELES EQUIVALEM A 0(ZERO) CASO NÃO SEJAM INFORMADOS.
+	s = a + b + c
+	return s
+
+r1 = somar(3, 2, 5) # AQUI SE ESTABELECE QUAIS OS RETORNOS (RESULTADOS) OU CÁLCULOS... 
+r2 = somar(2, 2) # DESSA FORMA, PODE-SE ORGANIZAR PELO "PRINT" ABAIXO COMO ESTES RESULTADOS SERÃO APRESENTADOS.
+r3 = somar(6)	# PODE-SE RETORNAR OS VALORES DA MANEIRA QUE ACHAR ADEQUADO ATRAVÉS DOS R1, R2 E R3.
+
+print(f'OS RESULTADOS FORAM {r1}, {r2} E {r3}')
+
+-------------------------------------------------------------------
+
+# FUNÇÕES PARA VOTAÇÃO (VOTO NEGADO, OPCIONAL OU OBRIGATÓRIO -------------EX. 101
+
+
+def voto(ano): #FUNÇÃO
+	from datetime import date # COM ESSE IMPORT, USA-SE DATA ATUAL DO PC
+	atual = date.today().year # AQUI, CALCULA-SE DATA (ANO) ATUAL
+	idade = atual - ano
+	if idade < 16:
+		return f'COM {idade} ANOS: NÃO VOTA!'
+	elif 16 <= idade < 18 or idade > 65:
+		return  f'COM {idade} ANOS: VOTO OPCIONAL.'
+	else:
+		return  f'COM {idade} ANOS: VOTO OBRIGATÓRIO.'
+
+print(voto(2000))
+
+--------------------------------------------------------------------------------
+
+##IMPRIMIR NA TELA FUNÇÃO DE FATORIAL  ------- EX 102
+
+
+def fatorial(n, show=False):
+""" 
+CALCULAM FATORIAL DE UM NUMERO.
+:PARAM n: O CACHORRO A SER CALCULADO.
+:PARAM SHOW: (opcional) MOSTRAR OU NÃO A CONTA.
+:RETURN: O VALOR DO FATORIAL DE UM NÚMERO N. '
+
+	f = 1
+	for c in range(n, 0,-1):
+ 		if show:
+			print(c, end='') # NESTA LINHA, O ", end='')" FAZ COM QUE OS RESULTADOS SEJAM MOSTRADOS NA MESMA LINHA... CASO NÃO ESTIVESSE PRESENTE, APARECERIAM UM EM CADA LINHA.
+			if c > 1:
+				print(' x ', end='')
+			else:
+				print(' = ', end='')
+		f *= c
+	return f
+
+
+#PROGRAMA PRINCIPAL
+print (fatorial(5, show=True))												
+help(fatorial)
+----------------------------------------------------------------------------------------------------
+# PROGRAMA COM FUNÇÃO "FICHA" COM PARÂMETROS OPCIONAIS. PODE RECEBER NOME DO JOGADOR E QUANTIDADE DE GOLS E MOSTRA A FICHA DO JOGADOR MESMO QUE ALGUMA DADO NÃO TENHA DISO INFORMADO CORRETAMENTE. --------- EX 103
+
+def ficha(jog='<DESCONHECIDO>', gol=0):
+	print(f'O JOGADOR {jog} FEZ {gol} GOL(S) NO CAMPEONATO.')
+
+# PROGRAMA PRINCIPAL
+
+n = str(input("NOME DO JOGADOR: "))
+g = str(input("NÚMERO DE GOLS: ")) # NÚMERO DE GOLS INFORMADO COMO "STRING" PARA QUE, CASO INFORMEM ALGO DIFERENTE DE NÚMERO O PROGRAMA NÃO TRAVE.
+if g.isnumeric(): # NESTA LINHA É FEITA A VALIDAÇÃO COM "isnumeric"...
+	g = int(g) # AQUI É DADA A CONDIÇÃO... CASO "g" SEJA NÚMERO, MOSTRAR NÚMERO.
+else:
+	g = 0  # CASO NÃO SEJA NUMÉRICO, MOSTRAR VALOR "0".
+if n.strip() == '':
+	ficha(gol=g)
+else:
+	ficha(n, g)
+-------------------------------------------------------------------------------------------------
+#VALIDANDO ENTRADA DE DADOS EM PYTHON ----- EX 104 
+
+def leiaint(msg):
+	ok = False
+	valor = 0
+	while True:
+		n = str(input(msg))
+		if n.isnumeric():
+			valor = int(n)
+			ok = True
+		else:
+			print('\033[0;31mERRO! DIGITE UM NÚMERO INTEIRO VÁLIDO.\033[m')
+		if ok:
+			break
+	return valor
+
+# PROGRAMA PRINCIPAL
+n = leiaint('DIGITE UM NÚMERO: ')
+print(f'VOCE ACABOU DE DIGITAR O NÚMERO {n}')
+
+------------------------------------------------------------------------------
+#ANALISANDO E GERANDO DICIONÁRIOS --- EX 105
+
+def notas(*n, sit=False):
+	"""
+	-> FUNÇÃO PARA ANALISAR NOTAS E SITUAÇÃO DE VÁRIOS ALUNOS.
+	:PARAM n: UMA OU MAIS NOTAS DO ALUNO (ACEITAM VÁRIAS)
+	:PARAM sit: VALOR OPCIONAL, INDICANDO SE DEVE OU NÃO ADICIONAR A SITUAÇÃO
+	:RETURN: DICIONÁRIO COM VÁRIAS INFORMAÇÕES SOBRE A SITUAÇÃO DA TURMA.
+	"""
+	r = dict()
+	r['total'] = len(n)
+	r['maior'] = max(n)
+	r['menor'] = min(n)
+	r['media'] = sum(n)/len(n)
+	if sit:
+		if r['media'] >= 7:
+			r['situação'] = 'BOA'
+		elif r['media'] >= 5:
+			r['situação'] = 'RAZOÁVEL'
+		else:
+			r['situação'] = 'RUIM'
+	return r
+
+# PROGRAMA PRINCIPAL
+
+resp = notas(5.5, 2.5, 1.5, sit=True)
+print(resp)
+help(notas)
+-----------------------------------------------------------------------------
+###SISTEMA INTERATIVO DE AJUDA EM PYTHON --- EX 106
+
+from time import sleep
+c = (	'\033[m',			# 0 - sem cores
+	'\033[0;30;41m',		# 1 - vermelho
+	'\033[0;30;42m',		# 2 - verde
+	'\033[0;30;43m',		# 3 - amarelo
+	'\033[0;30;44m',		# 4 - azul
+	'\033[0;30;45m',		# 5 - roxo
+	'\033[7;30m'			# 1 - branco
+     );
+
+def ajuda(com):
+	titulo(f'ACESSANDO O MANUAL DO COMANDO \'{com}\'', 4)
+	print(c[6], end='')
+	help(com)
+	print(c[0], end='')
+	sleep(2)
+
+def título(msg, cor =0):
+	tam = len(msg) + 4
+	print(c[cor], end='')
+	print('~' * tam)
+	print(f' {msg}')
+	print('~' * tam)
+	print(c[0], end='')
+	sleep(1)
+
+# PROGRAMA PRINCIPAL
+comendo = ''
+while True:
+	título('SISTEMA DE AJUDA PYHELP', 2)
+	comando = str(input("FUNÇÃO OU BILBIOTECA > "))
+	if comando.upper() == 'FIM':
+		break
+	else:
+		ajuda(comando)
+título('ATÉ LOGO!', 1)
+-------------------------------------------------------------------------------
+## AULA 22 - MÓDULOS E PACOTES
+
+AULA VOLTADA A EXECUÇÃO DE MÓDULOS JÁ EXISTENTES E CRIAÇÃO DE MÓDULOS QUE PODEM SER ÚTEIS AOS PROGRAMADORES.
+
+#VEJAMOS O EXEMPLO ABAIXO:
+
+# PRIMEIRO, CRIAREMOS O ARQUIVO UTEIS.PY COM O CÓDIGO ABAIXO:
+#UTEIS.PY
+def fatorial(n): # NO CASO, ESSE PROGRAMA CALCULA O FATORIAL DE UM NÚMERO
+	f = 1    # O FATORIAL MULTIPLICA O NÚMERO POR ELE MESMO E TOSODS ANTERIORES ATÉ CHEGAR EM 1.
+	for c in range(1, n+1): #COMO O PYTHON COMEÇA CONTANDO DO ZERO, USAMOS (n+1) PARA QUE COMECE MULTIPLICANDO DO NÚMERO DIGITADO.
+		f *= c # ESTA É A LINHA RESPONSÁVEL PELA MULTIPLICAÇÃO
+	return f
+
+def dobro(n): # AQUI SE ACRESCENTA INFORMAÇÃO QUE MOSTRA O DOBRO E LOGO ABAIXO O TRIPLO DO FATORIAL.
+	return n * 2
+
+def triplo(n):
+	return n * 3
+--------------------------------------------------
+# LOGO DEPOIS MONTAMOS O PROGRAMA PRINCIPAL QUE VAI ACESSAR O ARQUIVO "ÚTEIS.PY" PARA FUNCIONAR.
+# ARQUIVO PRINCIPAL...
+import uteis # AQUI JÁ SE ESTABELECE QUE O ARQUIVO "UTEIS.PY" QUE FOI CRIADO SERÁ UTILIZADO.
+
+num = int(input('DIGITE UM VALOR: '))
+fat = uteis.fatorial(num)
+print(f'O FATORIAL DE {num} É {fat}')
+print(f'O DOBRO DE {num} É {uteis.dobro(num)}')
+print(f'O TRIPLO DE {num} É {uteis.triplo(num)}')
+
+-------------------------------------------------------------------------------
+# PODE-SE CRIAR PACOTES DE MÓDULOS... APENAS JOGANDO-OS EM UMA PASTA (QUE VAI SER O PACOTE)
+
+---------------------------------------------------------
+# CRIAR MÓDULO (moeda.py) QUE TENHA FUNÇÕES aumentar, diminuir, dobro e metade. E IMPORTE ESSAS FUNCÇÕES NO PROGRAMA PRINCIPAL.
+
+#PARA ESTE EXERCÍCIO (PROJETO) RECOMENDA-SE CRIAR A PASTA (EX.107) E DENTRO DA PASTA CRIAR O ARQUIVO DO EXERCÍCIO 107 E DEPOIS O MÓDULO NECESSÁRIO.
+
+#PASTA EX. 107 >>> EX-107.PY
+#AGORA CRIAREMOS O moeda.py
+
+def aumentar(preço, taxa):
+	res = preço + (preço * taxa/100)
+	return res
+
+def diminuir(preço, taxa):
+	res = preço - (preço * taxa/100)
+	return res
+
+def dobro(preço):
+	res = preço * 2
+	return res
+
+def metade(preço):
+	res = preço / 2
+	return res
+-------------------------------------------------
+#AGORA, TENDO O (moeda.py) CRIADO, VAMOS AO PROGRAMA PRINCIPAL...
+# EX 107
+import moeda
+
+p = float(input('DIGITE O PREÇO: R$'))
+print(f'A METADADE DE R${p} É R${moeda.metade(p)}')
+print(f'O DOBRO DE R${p} É R${moeda.dobro(p)}')
+print(f'AUMENTANDO 10%, TEMOS R${moeda.aumentar (p, 10)}')
+
+-------------------------------------------------------------
+# PARA MANTERMOS OS DADOS DO EX. 107, FAREMOS UMA CÓPIA SALVANDO COMO 108... INCLUSIVE CÓPIA DE (moeda.py)... PASTA APENAS PARA ------ O EXERCÍCIO 108
+
+# 
+
+from ex108 import moeda
+
+p = float(input('DIGITE O PREÇO: R$'))
+print(f'A METADE DE {moeda.moeda(p, "US$")} É {moeda.moeda(moeda.metade(p))}')
+print(f'O DOBRO DE {moeda.moeda(p)} É {moeda.moeda(moeda.dobro(p))}')
+print(f'AUMENTANDO 10%, TEMOS {moeda.moeda(moeda.aumentar(p, 10))}')
+
+-------------------------------------------------------------------------
+#PASTA EX. 108 >>> EX-108.PY
+#AQUI ESTAMOS ALTERANDO OS VALORES PARA "=0" E INCLUINDO NO FINAL O "def moeda"
+
+def aumentar(preço=0, taxa=0):
+	res = preço + (preço * taxa/100)
+	return res
+
+def diminuir(preço=0, taxa=0):
+	res = preço - (preço * taxa/100)
+	return res
+
+def dobro(preço=0):
+	res = preço * 2
+	return res
+
+def metade(preço=0):
+	res = preço / 2
+	return res
+
+def moeda(preço=0, moeda='R$'):
+	return f'{moeda}{preço:>.2f}'.replace('.', ',')
+-------------------------------------------------------------------
+# PARA MANTERMOS OS DADOS DO EX. 107, FAREMOS UMA CÓPIA SALVANDO COMO 108... INCLUSIVE CÓPIA DE (moeda.py)... PASTA APENAS PARA ------ O EXERCÍCIO 108
+
+# 
+
+from ex109 import moeda
+
+p = float(input('DIGITE O PREÇO: R$'))
+print(f'A METADE DE {moeda.moeda(p)} É {moeda.metade(p, True)}')
+print(f'O DOBRO DE {moeda.moeda(p)} É {moeda.dobro(p, True)}')
+print(f'AUMENTANDO 10%, TEMOS {moeda(moeda.aumentar(p, 10, True)}')
+print(f'REDUZINDO 10%, TEMOS {moeda(moeda.aumentar(p, 10, True)}')
+-------------------------------------------------------------------------
+#PASTA EX. 109 >>> EX-109.PY
+#AQUI ESTAMOS ALTERANDO OS VALORES PARA "=0" E INCLUINDO NO FINAL O "def moeda"
+
+def aumentar(preço=0, taxa=0, formato=False):
+	res = preço + (preço * taxa/100)
+	return res if formato is False else moeda(res)
+
+def diminuir(preço=0, taxa=0):
+	res = preço - (preço * taxa/100)
+	return res if formato is False else moeda(res)
+
+def dobro(preço=0):
+	res = preço * 2
+	return res if formato is False else moeda(res)
+
+def metade(preço=0):
+	res = preço / 2
+	return res if formato is False else moeda(res)
+
+def moeda(preço=0, moeda='R$'):
+	return f'{moeda}{preço:>.2f}'.replace('.', ',')
+
+
+--------------------------------------------------------------------------------
+
