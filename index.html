@@ -1,81 +1,64 @@
-<!DOCTYPE html> <!--ABA EM HTML... (PRECISARÁ DA ABA ABAIXO EM CSS-->
-<html lang="pt-br">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>JOÃO QUEIROZ</title>
-	<link rel="stylesheet" href="index.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/home-page-styles.css">
+  <script src="./assets/scripts/script.js"></script>
+  <title>Spider-Man | Multiversos</title>
 </head>
 <body>
-	<div class="container"
+  <nav class="s-menu">
+    <ul>
+      <li class="s-menu__item">
+        <a href="/">Página Inicial</a>
+      </li>
+      <li class="s-menu__item">
+        <a href="#">Tobey Maguire</a>
+      </li>
+      <li class="s-menu__item s-menu__icon">
+        <img src="./assets/images/icons/spider.svg" alt="Spider-Man Multiverse">
+      </li>
+      <li class="s-menu__item">
+        <a href="#">Tom Holland</a>
+      </li>
+      <li class="s-menu__item">
+        <a href="#">Andrew Garfield</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="s-container">
+    <div class="s-cards-carousel" style="transform: translateZ(-40vw) rotateY(0deg);">
+      <a href="./pages/tobey-maguire/spiderman1.html" class="s-card" id="spider-man-01">
+        <img class="s-card__background" src="./assets/images/pic-sm-bg-01.jpg">
+        <img class="s-card__image" src="./assets/images/spider-man-01.png" alt="Tobey Maguire">
+        <h2 class="s-card__title">Tobey Maguire</h2>
+      </a>
+      <a href="./pages/tom-holland/spiderman1.html" class="s-card" id="spider-man-02">
+        <img class="s-card__background" src="./assets/images/pic-sm-bg-02.jpg">
+        <img class="s-card__image" src="./assets/images/spider-man-02.png" alt="Tom Holland">
+        <h2 class="s-card__title">Tom Holland</h2>
+      </a>
+      <a href="./pages/andrew-garfield/spiderman1.html" class="s-card" id="spider-man-03">
+        <img class="s-card__background" src="./assets/images/pic-sm-bg-03.jpg">
+        <img class="s-card__image" src="./assets/images/spider-man-03.png" alt="Andrew Garfield">
+        <h2 class="s-card__title">Andrew Garfield</h2>
+      </a>
+    </div>
+  </div>
 
-		<nav>
-			<ul>
-				<li>
-				<a href="index.html">Sobre mim</a> <!-- SERÁ CRIADA ABA HTML C DADOS SOBRE MIM-->
-				</li>
-				<li>
-				<a href="project.html">Projetos</a>  <!-- SERÁ CRIADA A ABA HTML COM OS PROJETOS-->
-				</li>
-				<li>
-				<a href="contact.html">Contato</a>  <!-- SERÁ CRIADA A ABA HTML COM OS CONTATOS-->
-				</li>
-	
-			</ul>
-		</nav>
-		<header>
-			<div class="center">
-				<img srcset="./img/joca.png"></img>	
-			</div>
-			<h1>João Queiroz</h1>
-			<h2>Profissional da área de T.I. - Estudante de programação</h2>
-		</header>
-		<main>
-			<section>
-				<h3>Sobre mim</h3>
-				<p>	
-				Profissional migrando da área da saúde para a área de tecnologia da informação. Após anos desempenhando atividades profissionais na área da saúde, encontro-me em busca de novos conhecimentos e oportunidades para iniciar nas áreas de tecnologia da informação e programação relacionados às linguagens JAVASCRIPT e PYTHON.
-			</p>
-			</section>
-			<section>
-				<h3>Formação</h3>
-				<p>	
-				Após anos atuando como profissional formado em Farmácia e Bioquímica e também em Auriculoterapia, tenho estudado e venho aplicando conhecimentos em JAVASCRIPT e PYHTON. Fazendo cursos na área de programação pelo site CURSO EM VÍDEO e tentando aumentar a prática nas linguagens e tecnologias relacionadas.
-				</p>
-			</section>
-			<section>
-				<h3>Competências</h3>
-				<p>	
-				- JavaScript <br/>
-				- Python <br/>
-				- Conhecimentos avançados em Inglês (leitura, escrita e conversação) <br/>
-				- Conhecimentos intermediários em Espanhol (leitura, escrita e conversação) <br/>
-				- Bons conhecimentos em Excel e pacote Office
-				</p>
-			</section>
-		</main>
-	
-		<footer>
-			<a href="https://github.com/JaoQueiroz/" target="blank" rel="noopener noreferrer">
-	
-		<!--PREENCHER NO LUGAR DE !!! (colocar ENDEREÇO GITHUB)... "target=blank" PARA ABRIR EM NOVA ABA
-		    rel="noopener noreferrer" --- QUESTÕES RELACIONADAS À SEGURANÇA
-		-->
-				<img src="./img/github.png"></img>
-				<p>Github</p>
-			</a>
-			<a href="https://www.linkedin.com/in/jo%C3%A3o-carlos-queiroz-lima-9427482b4/" target="blank" rel="noopener noreferrer">
-
-		<!--PREENCHER NO LUGAR DE !!! (colocar ENDEREÇO LINKEDIN)... "target=blank" PARA ABRIR EM NOVA ABA
-		    rel="noopener noreferrer" --- QUESTÕES RELACIONADAS À SEGURANÇA
-		-->
-				<img src="./img/linkedin.png"></img>
-				<p>Linkedin</p>
-			</a>
-
-
-		</footer>
-	</div>
+  <div class="s-controller">
+    <div id="1" onclick="selectCarouselItem(this)" class="s-controller__button s-controller__button--active">
+      01
+    </div>
+    <div id="2" onclick="selectCarouselItem(this)" class="s-controller__button">
+      02
+    </div>
+    <div id="3" onclick="selectCarouselItem(this)" class="s-controller__button">
+      03
+    </div>
+    <div class="s-controller__line"></div>
+  </div>
 </body>
 </html>
